@@ -1,0 +1,208 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient Background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main Container */
+.masterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Login Box */
+#loginbox {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out;
+}
+
+/* Animation for Login Box */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Left Side (Graphic and Text) */
+#graphic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+    color: #fff;
+    padding: 20px;
+    flex: 1;
+}
+
+#graphicImage {
+    width: 80px;
+    margin-bottom: 20px;
+    animation: rotateImage 5s infinite linear;
+}
+
+/* Rotate animation for image */
+@keyframes rotateImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#graphic p {
+    font-size: 1.2rem;
+    color: #f9f9f9;
+    font-weight: 500;
+}
+
+/* Right Side (Form) */
+#LoginArea {
+    background-color: #f9f9f9;
+    flex: 1;
+    padding: 40px 30px;
+    border-left: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginArea img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.boxItems {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.boxItems p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input Fields */
+.inputs input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease;
+    background-color: #fff;
+}
+
+/* Animation for input focus */
+.inputs input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.7);
+}
+
+/* Forgot password link */
+#forgot {
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#forgot:hover {
+    color: #1c5cb6;
+}
+
+/* Submit Button */
+#submitButton {
+    background-color: #2575fc;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: #1c5cb6;
+    transform: scale(1.05);
+}
+
+/* New Account Link */
+#log-on p {
+    font-size: 14px;
+    color: #333;
+}
+
+#log-on a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#log-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #loginbox {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    #graphicImage {
+        width: 70px;
+    }
+
+    #LoginArea {
+        padding: 20px;
+    }
+
+    #graphic {
+        flex: 0;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .boxItems p {
+        font-size: 1.1rem;
+    }
+
+    .inputs input {
+        padding: 12px;
+    }
+}
+
